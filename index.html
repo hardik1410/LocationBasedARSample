@@ -13,6 +13,20 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
+
+    <script>
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+            const lat = position.coords.latitude;
+            const long = position.coords.longitude;
+            console.log('Latitude: ', lat);
+            console.log('Longitude: ', long);
+            }, error => {
+                console.log('Need access to get location.');
+            });
+        }
+    </script>
+
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded
@@ -20,6 +34,6 @@
         
         <a-camera gps-camera rotation-reader></a-camera>
 
-        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude:72.57230025406896; latitude: 23.12027941976084;" animation-mixer/>
+        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude:72.571381; latitude: 23.115555;" animation-mixer/>
 	</a-scene>
 </body>
