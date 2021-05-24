@@ -59,7 +59,13 @@
     type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex'
     smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
 
-    <a-entity geometry="primitive: box" material="color: red"></a-entity>
+    <a-entity
+                gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf'
+                scale="5 5 5"
+                position="100 100 0"
+                >
+            </a-entity>
+    <!-- <a-entity geometry="primitive: box" material="color: red"></a-entity> -->
     <!-- <a-entity text="value: HELLO"></a-entity> -->
     <!-- <a-position="-1 0.5 -3" text value="Now Interactable" geometry="primitive:plane" color="black"></a-text> -->
     </a-nft>
